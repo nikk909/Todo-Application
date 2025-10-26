@@ -1,186 +1,186 @@
-# 待办事项应用 📝
+# Todo Application 📝
 
-一个基于 React + FastAPI + SQLite 的全栈待办事项应用，采用现代化的 UI 设计，提供完整的增删改查功能。
+A full-stack todo application based on React + FastAPI + SQLite, featuring modern UI design with complete CRUD functionality.
 
-## ✨ 功能特性
+## ✨ Features
 
-- ✅ **添加任务** - 快速创建新的待办事项，带空字段验证
-- 🔄 **标记完成** - 点击复选框或完成按钮切换任务状态
-- 🗑️ **删除任务** - 删除不需要的任务，带确认提示
-- 🔍 **智能筛选** - 查看全部/未完成/已完成任务
-- 🧹 **批量操作** - 一键清除已完成或清空所有任务，带警告确认
-- 💾 **数据持久化** - 使用 SQLite 数据库保存数据
-- 🎨 **优雅 UI** - 渐变背景、平滑动画、响应式设计
-- ⚠️ **智能提示** - 所有关键操作都有成功/失败/警告提示
-- ♿ **无障碍性** - 支持屏幕阅读器，符合 WCAG 标准
+- ✅ **Add Tasks** - Quickly create new todos with empty field validation
+- 🔄 **Mark Complete** - Toggle task status by clicking checkbox or complete button
+- 🗑️ **Delete Tasks** - Remove unwanted tasks with confirmation prompt
+- 🔍 **Smart Filter** - View all/active/completed tasks
+- 🧹 **Batch Operations** - Clear completed or all tasks with warning confirmation
+- 💾 **Data Persistence** - Save data using SQLite database
+- 🎨 **Elegant UI** - Gradient background, smooth animations, responsive design
+- ⚠️ **Smart Prompts** - Success/failure/warning feedback for all key operations
+- ♿ **Accessibility** - Screen reader support, WCAG compliant
 
-## 🛠️ 技术栈
+## 🛠️ Tech Stack
 
-### 前端
-- **React 18** - 现代化的前端框架
-- **Vite** - 快速的构建工具
-- **Axios** - HTTP 请求库
-- **CSS3** - 现代化样式设计
+### Frontend
+- **React 18** - Modern frontend framework
+- **Vite** - Fast build tool
+- **Axios** - HTTP request library
+- **CSS3** - Modern styling
 
-### 后端
-- **FastAPI** - 高性能的 Python Web 框架
-- **SQLite** - 轻量级数据库
-- **Pydantic** - 数据验证
-- **Uvicorn** - ASGI 服务器
+### Backend
+- **FastAPI** - High-performance Python web framework
+- **SQLite** - Lightweight database
+- **Pydantic** - Data validation
+- **Uvicorn** - ASGI server
 
-## 📦 项目结构
+## 📦 Project Structure
 
 ```
 work3/
-├── backend/                # 后端目录
-│   ├── main.py            # FastAPI 主应用
-│   ├── requirements.txt   # Python 依赖
-│   ├── todos.db          # SQLite 数据库（自动生成）
+├── backend/                # Backend directory
+│   ├── main.py            # FastAPI main application
+│   ├── requirements.txt   # Python dependencies
+│   ├── todos.db          # SQLite database (auto-generated)
 │   └── .gitignore
 │
-├── frontend/              # 前端目录
+├── frontend/              # Frontend directory
 │   ├── src/
-│   │   ├── App.jsx       # 主应用组件
-│   │   ├── App.css       # 应用样式
-│   │   ├── main.jsx      # 入口文件
-│   │   └── index.css     # 全局样式
-│   ├── index.html        # HTML 模板
-│   ├── vite.config.js    # Vite 配置
-│   ├── package.json      # 前端依赖
+│   │   ├── App.jsx       # Main application component
+│   │   ├── App.css       # Application styles
+│   │   ├── main.jsx      # Entry file
+│   │   └── index.css     # Global styles
+│   ├── index.html        # HTML template
+│   ├── vite.config.js    # Vite configuration
+│   ├── package.json      # Frontend dependencies
 │   └── .gitignore
 │
-├── database.sql          # 数据库表设计 SQL
-└── README.md             # 项目文档
+├── database.sql          # Database table design SQL
+└── README.md             # Project documentation
 ```
 
-## 🚀 快速开始
+## 🚀 Quick Start
 
-### 环境要求
+### Requirements
 
 - **Node.js** >= 16.0
 - **Python** >= 3.8
-- **npm** 或 **yarn**
+- **npm** or **yarn**
 
-### 1️⃣ 安装后端依赖
+### 1️⃣ Install Backend Dependencies
 
 ```bash
 cd backend
 
-# 创建虚拟环境（推荐）
+# Create virtual environment (recommended)
 python -m venv venv
 
-# 激活虚拟环境
+# Activate virtual environment
 # Windows:
 venv\Scripts\activate
 # Mac/Linux:
 source venv/bin/activate
 
-# 安装依赖
+# Install dependencies
 pip install -r requirements.txt
 ```
 
-### 2️⃣ 启动后端服务
+### 2️⃣ Start Backend Service
 
-**方式一：使用启动脚本（推荐）**
+**Method 1: Using Startup Script (Recommended)**
 ```bash
-# 在项目根目录（work3）下
+# In project root directory (work3)
 # Windows:
 start-backend.bat
 # Mac/Linux:
 ./backend/start.sh
 ```
 
-**方式二：手动启动**
+**Method 2: Manual Startup**
 ```bash
-# 在 backend 目录下，激活虚拟环境后
+# In backend directory, after activating virtual environment
 uvicorn main:app --host 0.0.0.0 --port 8000 --reload
 ```
 
-后端服务将运行在 `http://localhost:8000`
+Backend service will run on `http://localhost:8000`
 
-API 文档地址：
+API Documentation:
 - Swagger UI: http://localhost:8000/docs
 - ReDoc: http://localhost:8000/redoc
 
-### 3️⃣ 安装前端依赖
+### 3️⃣ Install Frontend Dependencies
 
 ```bash
-# 新开一个终端
+# Open a new terminal
 cd frontend
 
-# 安装依赖
+# Install dependencies
 npm install
 ```
 
-### 4️⃣ 启动前端应用
+### 4️⃣ Start Frontend Application
 
-**方式一：使用启动脚本（推荐）**
+**Method 1: Using Startup Script (Recommended)**
 ```bash
-# 在项目根目录（work3）下
+# In project root directory (work3)
 # Windows:
 start-frontend.bat
 # Mac/Linux:
 ./frontend/start.sh
 ```
 
-**方式二：手动启动**
+**Method 2: Manual Startup**
 ```bash
-# 在 frontend 目录下
+# In frontend directory
 npm run dev
 ```
 
-前端应用将运行在 `http://localhost:3000`
-> **注意**: 前端使用 Vite 开发服务器，代码修改后会自动热重载
+Frontend application will run on `http://localhost:3000`
+> **Note**: Frontend uses Vite dev server, code changes will auto-reload
 
-### 5️⃣ 访问应用
+### 5️⃣ Access Application
 
-在浏览器打开 `http://localhost:3000`，开始使用待办事项应用！
+Open `http://localhost:3000` in your browser and start using the todo app!
 
-## 📡 API 接口
+## 📡 API Endpoints
 
-### 获取所有待办事项
+### Get All Todos
 ```
 GET /api/todos?filter=all|active|completed
 ```
 
-### 获取单个待办事项
+### Get Single Todo
 ```
 GET /api/todos/{id}
 ```
 
-### 创建待办事项
+### Create Todo
 ```
 POST /api/todos
-Body: { "text": "任务内容" }
+Body: { "text": "Task content" }
 ```
 
-### 更新待办事项
+### Update Todo
 ```
 PUT /api/todos/{id}
-Body: { "text": "新内容", "completed": true }
+Body: { "text": "New content", "completed": true }
 ```
 
-### 删除待办事项
+### Delete Todo
 ```
 DELETE /api/todos/{id}
 ```
 
-### 清除已完成任务
+### Clear Completed Tasks
 ```
 DELETE /api/todos/clear/completed
 ```
 
-### 清空所有任务
+### Clear All Tasks
 ```
 DELETE /api/todos/clear/all
 ```
 
-### 获取统计信息
+### Get Statistics
 ```
 GET /api/stats
 ```
 
-## 🗄️ 数据库设计
+## 🗄️ Database Design
 
 ```sql
 CREATE TABLE todos (
@@ -192,70 +192,70 @@ CREATE TABLE todos (
 );
 ```
 
-## 🎨 UI 设计特点
+## 🎨 UI Design Features
 
-- **渐变背景** - 紫色到粉紫色的流畅渐变
-- **玻璃拟态** - 半透明卡片，带模糊效果
-- **平滑动画** - 悬停、点击、滑入动画
-- **响应式布局** - 适配移动端和桌面端
-- **视觉反馈** - 所有交互都有即时视觉反馈
+- **Gradient Background** - Smooth purple to pink-purple gradient
+- **Glassmorphism** - Semi-transparent cards with blur effect
+- **Smooth Animations** - Hover, click, and slide-in animations
+- **Responsive Layout** - Adapts to mobile and desktop
+- **Visual Feedback** - Instant visual feedback for all interactions
 
-## 📱 响应式设计
+## 📱 Responsive Design
 
-应用完美支持以下设备：
-- 📱 手机（320px+）
-- 📱 平板（640px+）
-- 💻 桌面（1024px+）
+Application perfectly supports:
+- 📱 Mobile (320px+)
+- 📱 Tablet (640px+)
+- 💻 Desktop (1024px+)
 
-## 🔧 开发命令
+## 🔧 Development Commands
 
-### 后端开发
+### Backend Development
 ```bash
-# 运行开发服务器（自动重载）
+# Run development server (auto-reload)
 uvicorn main:app --reload
 
-# 或直接运行
+# Or run directly
 python main.py
 ```
 
-### 前端开发
+### Frontend Development
 ```bash
-# 开发模式
+# Development mode
 npm run dev
 
-# 构建生产版本
+# Build for production
 npm run build
 
-# 预览生产版本
+# Preview production build
 npm run preview
 ```
 
-## 📝 使用说明
+## 📝 Usage Instructions
 
-1. **添加任务**：在输入框输入任务内容，点击"添加"按钮
-2. **标记完成**：点击任务前的圆圈或"完成"按钮
-3. **取消完成**：再次点击已完成任务的圆圈或"取消完成"按钮
-4. **删除任务**：点击任务右侧的"删除"按钮
-5. **筛选任务**：点击"全部"、"未完成"、"已完成"按钮切换视图
-6. **清除已完成**：点击底部"清除已完成"按钮
-7. **清空所有**：点击底部"清空所有"按钮
+1. **Add Task**: Enter task content in input field, click "Add" button
+2. **Mark Complete**: Click circle before task or "Complete" button
+3. **Unmark Complete**: Click circle or "Undo Complete" button on completed task
+4. **Delete Task**: Click "Delete" button on the right side of task
+5. **Filter Tasks**: Click "All", "Active", or "Completed" buttons to switch views
+6. **Clear Completed**: Click "Clear Completed" button at the bottom
+7. **Clear All**: Click "Clear All" button at the bottom
 
-## 🔧 关键技术修复
+## 🔧 Key Technical Fixes
 
-### SQLite 线程安全问题
-在 FastAPI 异步环境中使用 SQLite 时，需要在连接时添加 `check_same_thread=False` 参数：
+### SQLite Thread Safety Issue
+When using SQLite in FastAPI async environment, add `check_same_thread=False` parameter when connecting:
 ```python
 conn = sqlite3.connect(DB_PATH, check_same_thread=False)
 ```
 
-### 数据类型转换
-SQLite 的 BOOLEAN 类型实际存储为整数（0/1），需要在返回给前端前转换为布尔值：
+### Data Type Conversion
+SQLite BOOLEAN type is actually stored as integer (0/1), needs to be converted to boolean before returning to frontend:
 ```python
 result['completed'] = bool(result['completed'])
 ```
 
-### Pydantic V2 配置
-使用新版 Pydantic 的 `ConfigDict` 替代旧的 `class Config`：
+### Pydantic V2 Configuration
+Use new Pydantic `ConfigDict` instead of old `class Config`:
 ```python
 from pydantic import BaseModel, ConfigDict
 
@@ -263,52 +263,51 @@ class Todo(BaseModel):
     model_config = ConfigDict(from_attributes=True)
 ```
 
-## 🐛 常见问题
+## 🐛 Common Issues
 
-### 1. 后端启动失败
-- 确保已安装 Python 3.8+
-- 检查端口 8000 是否被占用：`netstat -ano | findstr "8000"`
-- 确认已正确安装依赖：`pip install -r requirements.txt`
-- 使用 `uvicorn main:app` 而不是 `python main.py`
+### 1. Backend Won't Start
+- Ensure Python 3.8+ is installed
+- Check if port 8000 is occupied: `netstat -ano | findstr "8000"`
+- Confirm dependencies are correctly installed: `pip install -r requirements.txt`
+- Use `uvicorn main:app` instead of `python main.py`
 
-### 2. 前端无法连接后端
-- 确保后端服务已启动（端口 8000）
-- 检查后端运行在 `http://localhost:8000`
-- 查看浏览器控制台网络错误信息
-- 确认 Vite 代理配置正确
+### 2. Frontend Can't Connect to Backend
+- Ensure backend service is running (port 8000)
+- Check backend is running on `http://localhost:8000`
+- View browser console network error messages
+- Confirm Vite proxy configuration is correct
 
-### 3. 数据无法保存
-- 确保后端目录有写入权限
-- 检查 `todos.db` 文件是否正常创建
-- 查看后端控制台错误日志
-- 确认 SQLite 连接配置正确
+### 3. Data Won't Save
+- Ensure backend directory has write permissions
+- Check if `todos.db` file is created properly
+- View backend console error logs
+- Confirm SQLite connection configuration is correct
 
-### 4. 空输入没有警告
-- 前端已添加输入验证，空字段会弹出 `⚠️ 请输入任务内容！`
-- 如未生效，请刷新浏览器（Vite 热重载）
+### 4. No Warning for Empty Input
+- Frontend has input validation, empty fields will show `⚠️ Please enter task content!`
+- If not working, refresh browser (Vite hot reload)
 
-## 🔐 安全性
+## 🔐 Security
 
-- ✅ 输入内容自动 HTML 转义，防止 XSS 攻击
-- ✅ API 参数验证，使用 Pydantic 模型
-- ✅ SQL 查询使用参数化，防止 SQL 注入
-- ✅ CORS 配置，限制跨域访问
+- ✅ Automatic HTML escaping for input content, prevents XSS attacks
+- ✅ API parameter validation using Pydantic models
+- ✅ SQL queries use parameterization, prevents SQL injection
+- ✅ CORS configuration, restricts cross-origin access
 
 ## 📄 License
 
 MIT License
 
-## 👨‍💻 作者
+## 👨‍💻 Author
 
 **nikk909**  
 📧 Email: yinghua253659@163.com  
 🔗 GitHub: [@nikk909](https://github.com/nikk909)
 
-基于现代化技术栈开发的全栈待办事项应用
+A full-stack todo application developed with modern tech stack
 
 ---
 
-**祝您使用愉快！** 🎉
+**Enjoy using the app!** 🎉
 
-如有问题，欢迎提 Issue 或 PR。
-
+Feel free to submit Issues or PRs if you have any questions.
