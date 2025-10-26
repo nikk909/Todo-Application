@@ -1,0 +1,199 @@
+{
+  "info": {
+    "name": "待办事项 API",
+    "description": "待办事项应用 RESTful API 测试集合",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "variable": [
+    {
+      "key": "base_url",
+      "value": "http://localhost:8000",
+      "type": "string"
+    }
+  ],
+  "item": [
+    {
+      "name": "健康检查",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/",
+          "host": ["{{base_url}}"]
+        }
+      }
+    },
+    {
+      "name": "获取所有任务",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/api/todos",
+          "host": ["{{base_url}}"],
+          "path": ["api", "todos"]
+        }
+      }
+    },
+    {
+      "name": "获取未完成任务",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/api/todos?filter=active",
+          "host": ["{{base_url}}"],
+          "path": ["api", "todos"],
+          "query": [
+            {
+              "key": "filter",
+              "value": "active"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "获取已完成任务",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/api/todos?filter=completed",
+          "host": ["{{base_url}}"],
+          "path": ["api", "todos"],
+          "query": [
+            {
+              "key": "filter",
+              "value": "completed"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "创建新任务",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"text\": \"新建的测试任务\"\n}"
+        },
+        "url": {
+          "raw": "{{base_url}}/api/todos",
+          "host": ["{{base_url}}"],
+          "path": ["api", "todos"]
+        }
+      }
+    },
+    {
+      "name": "获取单个任务",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/api/todos/1",
+          "host": ["{{base_url}}"],
+          "path": ["api", "todos", "1"]
+        }
+      }
+    },
+    {
+      "name": "更新任务（标记完成）",
+      "request": {
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"completed\": true\n}"
+        },
+        "url": {
+          "raw": "{{base_url}}/api/todos/1",
+          "host": ["{{base_url}}"],
+          "path": ["api", "todos", "1"]
+        }
+      }
+    },
+    {
+      "name": "更新任务（修改内容）",
+      "request": {
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"text\": \"更新后的任务内容\",\n  \"completed\": false\n}"
+        },
+        "url": {
+          "raw": "{{base_url}}/api/todos/1",
+          "host": ["{{base_url}}"],
+          "path": ["api", "todos", "1"]
+        }
+      }
+    },
+    {
+      "name": "删除任务",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/api/todos/1",
+          "host": ["{{base_url}}"],
+          "path": ["api", "todos", "1"]
+        }
+      }
+    },
+    {
+      "name": "清除已完成任务",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/api/todos/clear/completed",
+          "host": ["{{base_url}}"],
+          "path": ["api", "todos", "clear", "completed"]
+        }
+      }
+    },
+    {
+      "name": "清空所有任务",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/api/todos/clear/all",
+          "host": ["{{base_url}}"],
+          "path": ["api", "todos", "clear", "all"]
+        }
+      }
+    },
+    {
+      "name": "获取统计信息",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/api/stats",
+          "host": ["{{base_url}}"],
+          "path": ["api", "stats"]
+        }
+      }
+    }
+  ]
+}
+
