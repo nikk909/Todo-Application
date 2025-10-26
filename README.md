@@ -1,17 +1,29 @@
-# Todo Application 📝
+# ✨ Advanced Todo Manager 📝
 
-A full-stack todo application based on React + FastAPI + SQLite, featuring modern UI design with complete CRUD functionality.
+A powerful full-stack todo application built with React + FastAPI + SQLite, featuring advanced search, pagination, inline editing, and a stunning animated UI.
 
-## ✨ Features
+## 🚀 Features
 
+### Core Functionality
 - ✅ **Add Tasks** - Quickly create new todos with empty field validation
+- ✏️ **Inline Edit** - Double-click or click edit button to rename tasks
 - 🔄 **Mark Complete** - Toggle task status by clicking checkbox or complete button
 - 🗑️ **Delete Tasks** - Remove unwanted tasks with confirmation prompt
-- 🔍 **Smart Filter** - View all/active/completed tasks
+- 💾 **Data Persistence** - All data saved in SQLite database
+
+### Advanced Features
+- 🔍 **Powerful Search** - Search with fuzzy or exact matching
+- 📄 **Pagination** - Navigate through tasks with customizable page size (5/10/20/50)
+- 📊 **Real-time Stats** - View total, active, and completed task counts
+- 🎯 **Smart Filters** - View all/active/completed tasks
 - 🧹 **Batch Operations** - Clear completed or all tasks with warning confirmation
-- 💾 **Data Persistence** - Save data using SQLite database
-- 🎨 **Elegant UI** - Gradient background, smooth animations, responsive design
-- ⚠️ **Smart Prompts** - Success/failure/warning feedback for all key operations
+
+### UI/UX
+- 🎨 **Animated Background** - Complex particle effects with floating gradients
+- ✨ **Glassmorphism Design** - Semi-transparent cards with blur effects
+- 🌈 **Gradient Animations** - Dynamic color transitions and glowing effects
+- 📱 **Fully Responsive** - Perfect on mobile, tablet, and desktop
+- ⚠️ **Smart Prompts** - Success/failure/warning feedback for all operations
 - ♿ **Accessibility** - Screen reader support, WCAG compliant
 
 ## 🛠️ Tech Stack
@@ -138,9 +150,26 @@ Open `http://localhost:3000` in your browser and start using the todo app!
 
 ## 📡 API Endpoints
 
-### Get All Todos
+### Get All Todos (with Search & Pagination)
 ```
-GET /api/todos?filter=all|active|completed
+GET /api/todos?filter=all|active|completed&search=keyword&search_type=fuzzy|exact&page=1&page_size=10
+```
+**Parameters:**
+- `filter`: all (default), active, completed
+- `search`: search keyword (optional)
+- `search_type`: fuzzy (default) or exact
+- `page`: page number (default: 1)
+- `page_size`: items per page (default: 10, 0 = no pagination)
+
+**Response:**
+```json
+{
+  "todos": [...],
+  "total": 50,
+  "page": 1,
+  "page_size": 10,
+  "total_pages": 5
+}
 ```
 
 ### Get Single Todo
@@ -154,11 +183,12 @@ POST /api/todos
 Body: { "text": "Task content" }
 ```
 
-### Update Todo
+### Update Todo (Edit Name or Status)
 ```
 PUT /api/todos/{id}
 Body: { "text": "New content", "completed": true }
 ```
+*Note: Both fields are optional. You can update just the text or just the status.*
 
 ### Delete Todo
 ```
@@ -178,6 +208,14 @@ DELETE /api/todos/clear/all
 ### Get Statistics
 ```
 GET /api/stats
+```
+**Response:**
+```json
+{
+  "total": 50,
+  "active": 30,
+  "completed": 20
+}
 ```
 
 ## 🗄️ Database Design
@@ -232,13 +270,28 @@ npm run preview
 
 ## 📝 Usage Instructions
 
-1. **Add Task**: Enter task content in input field, click "Add" button
-2. **Mark Complete**: Click circle before task or "Complete" button
-3. **Unmark Complete**: Click circle or "Undo Complete" button on completed task
-4. **Delete Task**: Click "Delete" button on the right side of task
-5. **Filter Tasks**: Click "All", "Active", or "Completed" buttons to switch views
-6. **Clear Completed**: Click "Clear Completed" button at the bottom
-7. **Clear All**: Click "Clear All" button at the bottom
+### Basic Operations
+1. **Add Task**: Enter task content in input field, click "Add Task" button
+2. **Edit Task**: Double-click task name or click "Edit" button, then save or cancel
+3. **Mark Complete**: Click checkbox or "Complete" button
+4. **Unmark Complete**: Click checkbox or "Undo" button on completed task
+5. **Delete Task**: Click "Delete" button (with confirmation)
+
+### Search & Filter
+6. **Search Tasks**: 
+   - Enter keyword in search box at the top
+   - Toggle between "Fuzzy" (partial match) or "Exact" (exact match)
+   - Click "Search" button
+   - Click "Clear" to reset search
+7. **Filter Tasks**: Click "All", "Active", or "Completed" buttons
+
+### Pagination
+8. **Navigate Pages**: Use First/Prev/Next/Last buttons or click page numbers
+9. **Change Page Size**: Select 5/10/20/50 items per page from dropdown
+
+### Batch Operations
+10. **Clear Completed**: Click "Clear Completed" button at the bottom
+11. **Clear All**: Click "Clear All" button (with warning)
 
 ## 🔧 Key Technical Fixes
 
