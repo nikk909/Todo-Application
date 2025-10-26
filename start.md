@@ -1,10 +1,10 @@
-# 🚀 快速启动指南
+# 🚀 Quick Start Guide
 
-## Windows 用户
+## Windows Users
 
-### 启动后端
+### Start Backend
 ```powershell
-# 终端 1
+# Terminal 1
 cd backend
 python -m venv venv
 .\venv\Scripts\activate
@@ -12,19 +12,19 @@ pip install -r requirements.txt
 python main.py
 ```
 
-### 启动前端
+### Start Frontend
 ```powershell
-# 终端 2（新开一个）
+# Terminal 2 (open a new one)
 cd frontend
 npm install
 npm run dev
 ```
 
-## Mac/Linux 用户
+## Mac/Linux Users
 
-### 启动后端
+### Start Backend
 ```bash
-# 终端 1
+# Terminal 1
 cd backend
 python -m venv venv
 source venv/bin/activate
@@ -32,28 +32,27 @@ pip install -r requirements.txt
 python main.py
 ```
 
-### 启动前端
+### Start Frontend
 ```bash
-# 终端 2（新开一个）
+# Terminal 2 (open a new one)
 cd frontend
 npm install
 npm run dev
 ```
 
-## 访问应用
+## Access the Application
 
-- **前端应用**: http://localhost:3000
-- **后端 API**: http://localhost:8000
-- **API 文档**: http://localhost:8000/docs
+- **Frontend**: http://localhost:3000
+- **Backend API**: http://localhost:8000
+- **API Documentation**: http://localhost:8000/docs
 
-## 注意事项
+## Notes
 
-1. 确保 Python 3.8+ 和 Node.js 16+ 已安装
-2. 先启动后端，再启动前端
-3. 端口 8000 和 3000 不要被占用
-4. 后端会自动创建 `backend/todos.db` 数据库文件
+1. Ensure Python 3.8+ and Node.js 16+ are installed
+2. Start the backend first, then start the frontend
+3. Make sure ports 8000 and 3000 are not occupied
+4. The backend will automatically create the `backend/todos.db` database file
 
-## 测试 API
+## Test API
 
-后端启动后，可以访问 http://localhost:8000/docs 测试所有 API 接口。
-
+After the backend starts, you can visit http://localhost:8000/docs to test all API interfaces.

@@ -1,48 +1,47 @@
-# 后端 API 服务
+# Backend API Service
 
-FastAPI 待办事项后端服务。
+FastAPI Todo Application Backend Service.
 
-## 快速开始
+## Quick Start
 
-### 1. 安装依赖
+### 1. Install Dependencies
 
 ```bash
-# 创建虚拟环境
+# Create virtual environment
 python -m venv venv
 
-# 激活虚拟环境
+# Activate virtual environment
 # Windows:
 venv\Scripts\activate
 # Mac/Linux:
 source venv/bin/activate
 
-# 安装依赖
+# Install dependencies
 pip install -r requirements.txt
 ```
 
-### 2. 启动服务
+### 2. Start Service
 
 ```bash
 python main.py
 ```
 
-服务将运行在 `http://localhost:8000`
+Service will run on `http://localhost:8000`
 
-## API 文档
+## API Documentation
 
-启动服务后访问：
+After starting the service, visit:
 - Swagger UI: http://localhost:8000/docs
 - ReDoc: http://localhost:8000/redoc
 
-## 主要功能
+## Main Features
 
-- ✅ RESTful API 设计
-- ✅ 自动数据验证（Pydantic）
-- ✅ SQLite 数据库持久化
-- ✅ CORS 跨域支持
-- ✅ 自动交互式文档
+- ✅ RESTful API design
+- ✅ Automatic data validation (Pydantic)
+- ✅ SQLite database persistence
+- ✅ CORS cross-origin support
+- ✅ Automatic interactive documentation
 
-## 数据库
+## Database
 
-应用启动时会自动创建 `todos.db` SQLite 数据库文件。
-
+The application will automatically create a `todos.db` SQLite database file on startup.

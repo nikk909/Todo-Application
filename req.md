@@ -1,10 +1,27 @@
-创建一个待办事项应用
-1，需要包含一个标题、一个用于输入新任务的表单（包含输入框和添加按钮）、以及一个用于显示待办事项列表的序列表。
-2，请设计一套现代、简洁的CSS样式。主体居中显示，最大宽度为800px。输入框和按钮样式要美观。列表项之间要有间距。鼠标悬停在按钮和列表项上时，需要有视觉反馈效果。
-3，需要实现添加待办事项功能，用户点添加按钮时，拿输入框里的内容，新建个li加到列表里，加完把输入框清空。
-4，实现标记完成和删除功能。每个列表项(li)内部，应该包含一个'完成'按钮和一个'删除'按钮。点击'完成'按钮，该列表项应添加一个'completed'的CSS类（用于划掉文字）。点击'删除'按钮，该列表项应从列表中移除。 
-5，查询条件有“全部”，“未完成”，“已完成”，底部的功能有“清除已完成”，“清除全部” 实现功能。
+# Todo Application Requirements
 
-技术要求：前端：react，后端：fastapi，数据库：sqlite
-项目分：backend，front 2个目录
-表设计：请按待办事项应用设计一个表，提供sql语句。
+## Functional Requirements
+
+1. **UI Structure**: The application needs to include a title, a form for entering new tasks (with input field and add button), and a list for displaying todo items.
+
+2. **Design Style**: Design a modern, clean CSS style. The main content should be centered with a maximum width of 800px. Input fields and buttons should be aesthetically pleasing. List items should have spacing between them. Buttons and list items should have visual feedback effects on hover.
+
+3. **Add Todo Function**: When the user clicks the add button, get the content from the input field, create a new `<li>` element and add it to the list, then clear the input field.
+
+4. **Complete and Delete Functions**: Each list item (`<li>`) should include a 'Complete' button and a 'Delete' button. Clicking the 'Complete' button should add a 'completed' CSS class (for striking through text). Clicking the 'Delete' button should remove the list item from the list.
+
+5. **Filter and Clear Functions**: Implement filter options including "All", "Active", and "Completed". Bottom functions should include "Clear Completed" and "Clear All".
+
+## Technical Requirements
+
+- **Frontend**: React
+- **Backend**: FastAPI
+- **Database**: SQLite
+
+## Project Structure
+
+- Project divided into: `backend` and `frontend` directories
+
+## Database Design
+
+Design a database table for the todo application and provide SQL statements.

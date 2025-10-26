@@ -1,55 +1,54 @@
-# 前端应用
+# Frontend Application
 
-React + Vite 待办事项前端应用。
+React + Vite Todo Application Frontend.
 
-## 快速开始
+## Quick Start
 
-### 1. 安装依赖
+### 1. Install Dependencies
 
 ```bash
 npm install
-# 或
+# or
 yarn install
 ```
 
-### 2. 启动开发服务器
+### 2. Start Development Server
 
 ```bash
 npm run dev
-# 或
+# or
 yarn dev
 ```
 
-应用将运行在 `http://localhost:3000`
+Application will run on `http://localhost:3000`
 
-### 3. 构建生产版本
+### 3. Build for Production
 
 ```bash
 npm run build
-# 或
+# or
 yarn build
 ```
 
-## 技术栈
+## Tech Stack
 
-- **React 18** - UI 框架
-- **Vite** - 构建工具
-- **Axios** - HTTP 客户端
-- **CSS3** - 样式设计
+- **React 18** - UI framework
+- **Vite** - Build tool
+- **Axios** - HTTP client
+- **CSS3** - Style design
 
-## 设计风格
+## Design Style
 
-继承自 work2 的设计风格：
-- 渐变紫色背景
-- 玻璃拟态卡片
-- 平滑动画效果
-- 响应式布局
+Inherited from work2 design style:
+- Gradient purple background
+- Glassmorphism cards
+- Smooth animation effects
+- Responsive layout
 
-## 配置
+## Configuration
 
-在 `vite.config.js` 中配置了：
-- 开发服务器端口：3000
-- API 代理：`/api` -> `http://localhost:8000`
+Configured in `vite.config.js`:
+- Development server port: 3000
+- API proxy: `/api` -> `http://localhost:8000`
 
-确保后端服务运行在 8000 端口。
-
+Ensure backend service is running on port 8000.
