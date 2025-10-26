@@ -42,10 +42,10 @@ def init_db():
 async def lifespan(app: FastAPI):
     # Startup
     init_db()
-    print(f"✅ Database initialized: {DB_PATH}")
+    print(f"Database initialized: {DB_PATH}")
     yield
     # Shutdown
-    print("👋 Application closing")
+    print("Application closing")
 
 
 # Create FastAPI application
